@@ -1,27 +1,32 @@
-public String hello = "hello";
+void main(){
+    Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+    System.out.println("Wpisz pierwsza liczbe");
 
-public class Item{
+    int num1 = myObj.nextInt();
+      // Read user input
 
-    public int wartosc = 0;
-    String nazwa;
+    System.out.println("Wpisz druga liczbe");
 
-}
+    int num2 = myObj.nextInt();  // Read user input
 
-void main() {
-    int number = 3;
-    String text = "Cześć";
-    char letter = 'A';
-    float num = 2137.6432f;
-    int[] tab = {1,2,3};
-    String[] tab2 = {"String", "hE;;P"};
-    boolean logic = true;
+    System.out.println("Żeby dodać - 1, Żeby odjąć - 2, Mnożenie - 3, Dzielenie - 4");
+    int next = myObj.nextInt();
 
-    String[] eq = {"Miecz", "Zbroja" };
-
-    for (int i = 0; i <= eq.length; i++){
-        System.out.println();
+    if (next == 1) {
+        System.out.println("Wynik" + ": " + (num1 + num2));
     }
 
-}
 
+    if (next == 2) {
+        System.out.println("Wynik" + ": " + (num1 - num2));
+    }
 
+    if (next == 3) {
+        System.out.println("Wynik" + ": " + (num1 * num2));
+    }
+
+    if (next == 4) {
+        System.out.println("Wynik" + ": " + (num1 / num2));
+    }
+
+    }
